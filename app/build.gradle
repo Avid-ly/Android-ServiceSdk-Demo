@@ -17,6 +17,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+    }
 }
 
 repositories {
@@ -26,16 +30,17 @@ repositories {
 }
 
 dependencies {
+    implementation 'com.android.support:multidex:1.0.2'
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.android.support:design:28.0.0'
     implementation 'com.android.support:cardview-v7:28.0.0'
     implementation 'com.android.support:recyclerview-v7:28.0.0'
     implementation 'com.android.support:customtabs:28.0.0'
-    implementation('com.facebook.android:facebook-login:[4,5)') {
-        // values.xml中增加facebook_app_id，fb_login_protocol_scheme
-        exclude group: 'com.android.support'//排除组织依赖
-        exclude module: 'appcompat-v7'//排除模块依赖
-    }
+    implementation 'com.android.support:design:28.0.0'
+//    implementation('com.facebook.android:facebook-login:[4,5)') {
+//        // values.xml中增加facebook_app_id，fb_login_protocol_scheme
+//        exclude group: 'com.android.support'//排除组织依赖
+//        exclude module: 'appcompat-v7'//排除模块依赖
+//    }
     // account sdk
     implementation (name:'AASDK_1.0.8_release', ext:'aar')
     // analysis sdk
@@ -43,6 +48,5 @@ dependencies {
     // csssdk and supports
     implementation 'com.css.sdk:cssdk:1.0.02.1'
     implementation 'com.github.bumptech.glide:glide:4.6.1'
-    implementation 'com.luck.picture:pictureSelector:2.5.3'
-    implementation 'com.yalantis.ucrop:ucropLib:2.2.0'
+    implementation 'com.luck.picture:pictureSelector:2.5.4'
 }

@@ -42,9 +42,9 @@ dependencies {
 //        exclude module: 'appcompat-v7'//排除模块依赖
 //    }
     // account sdk
-    implementation (name:'AASDK_1.0.8_release', ext:'aar')
+    implementation (name:'AASDK_1.0.09_release', ext:'aar')
     // analysis sdk
-    implementation (name:'analysissdk-foreign_R3.2.0.6', ext:'aar')
+    implementation (name:'analysissdk-foreign_R4.0.0.1', ext:'aar')
     // csssdk and supports
     implementation 'com.css.sdk:cssdk:1.0.02.1'
     implementation 'com.github.bumptech.glide:glide:4.6.1'

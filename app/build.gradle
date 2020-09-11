@@ -46,7 +46,7 @@ dependencies {
     // analysis sdk
     implementation (name:'analysissdk-foreign_R4.0.0.1', ext:'aar')
     // csssdk and supports
-    implementation 'com.css.sdk:cssdk:1.0.02.1'
+    implementation 'com.css.sdk:cssdk:1.0.03.1'
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     implementation 'com.luck.picture:pictureSelector:2.5.4'
 }

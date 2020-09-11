@@ -3,6 +3,7 @@ package com.avidly.cssdk.demo;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -14,6 +15,11 @@ import com.aas.sdk.account.AASdk;
 import com.aly.sdk.ALYAnalysis;
 import com.css.sdk.cservice.CServiceSdk;
 import com.css.sdk.cservice.InitCallback;
+import com.css.sdk.cservice.constant.CSSConstant;
+import com.css.sdk.cservice.listener.CSSExistNewReplyCallback;
+
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     private Button open;
@@ -21,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
     private Button usercenter;
     private TextView tv;
     private ImageView ivShow;
-    private Bitmap firstFrame;
     private static String TAG = "roy";
 
 
@@ -55,11 +60,23 @@ public class MainActivity extends AppCompatActivity {
         ALYAnalysis.init(this, "600180", "32401");
 
         AASdk.initSdk(this, "600180");
-
-        CServiceSdk.initSdk(MainActivity.this, new InitCallback() {
+        Map<String,String> cpInfo=new LinkedHashMap<>();
+        cpInfo.put(CSSConstant.CSSCONSTANT_HOTFIXVER,"1.0.02000");
+        CServiceSdk.initSdk(MainActivity.this, cpInfo,new InitCallback() {
             @Override
             public void onInitSuccess() {
                 Toast.makeText(MainActivity.this, "Init success", Toast.LENGTH_SHORT).show();
+                CServiceSdk.setNewReplayCallback(new CSSExistNewReplyCallback() {
+                    @Override
+                    public void hasNewReplySuccess(boolean msg) {
+                        Log.i(TAG, "hasNewReplySuccess: "+msg);
+                    }
+
+                    @Override
+                    public void hasNewReplyFail(String s) {
+                        Log.i(TAG, "hasNewReplySuccess: "+s);
+                    }
+                });
             }
 
             @Override

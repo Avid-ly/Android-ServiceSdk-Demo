@@ -62,7 +62,8 @@ public class MainActivity extends AppCompatActivity {
         AASdk.initSdk(this, "600180");
         Map<String,String> cpInfo=new LinkedHashMap<>();
         cpInfo.put(CSSConstant.CSSCONSTANT_HOTFIXVER,"1.0.02000");
-        CServiceSdk.initSdk(MainActivity.this, cpInfo,new InitCallback() {
+        CServiceSdk.addExtraMsg(cpInfo);
+        CServiceSdk.initSdk(MainActivity.this, "600180",new InitCallback() {
             @Override
             public void onInitSuccess() {
                 Toast.makeText(MainActivity.this, "Init success", Toast.LENGTH_SHORT).show();

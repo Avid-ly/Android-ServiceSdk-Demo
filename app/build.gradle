@@ -43,10 +43,12 @@ dependencies {
 //    }
     // account sdk
     // analysis sdk
-    implementation 'com.aly.sdk:analysissdk:4.0.0.6'
+    implementation 'com.aly.sdk:analysissdk:4.0.0.8'
     // csssdk and supports
-    implementation 'com.css.sdk:cssdk:1.0.05.5'
-    implementation 'com.aas.sdk.account:aasdk:1.0.14'
+    implementation 'com.css.sdk:cssdk:2.0.01.1'
+    implementation 'com.aas.sdk.account:aasdk:1.0.19'
     implementation 'com.github.bumptech.glide:glide:4.6.1'
     implementation 'com.luck.picture:pictureSelector:2.5.4'
+    implementation 'com.qmuiteam:qmui:1.2.0'
+    implementation 'com.qmuiteam:arch:0.3.1'
 }

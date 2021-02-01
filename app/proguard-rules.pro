@@ -30,3 +30,10 @@
 
 #Okio
 -dontwarn org.codehaus.mojo.animal_sniffer.*
+
+#qmui
+-keep class com.qmuiteam.qmui.arch.record.RecordIdClassMap { *; }
+-keep class com.qmuiteam.qmui.arch.record.RecordIdClassMapImpl { *; }
+
+-keep class com.qmuiteam.qmui.arch.scheme.SchemeMap {*;}
+-keep class com.qmuiteam.qmui.arch.scheme.SchemeMapImpl {*;}

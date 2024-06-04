@@ -2,13 +2,14 @@ package com.avidly.cssdk.demo;
 
 import android.graphics.Bitmap;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.aas.sdk.account.AASTokenCallback;
 import com.aas.sdk.account.AASdk;
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         open = findViewById(R.id.open);
-        ivShow = findViewById(R.id.iv);
+//        ivShow = findViewById(R.id.iv);
         open.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

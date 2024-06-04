@@ -1,7 +1,7 @@
 package com.avidly.cssdk.demo;
 
 import android.content.Context;
-import android.support.multidex.MultiDexApplication;
+import androidx.multidex.MultiDexApplication;
 
 public class MyApplication extends MultiDexApplication {
 
